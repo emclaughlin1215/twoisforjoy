@@ -6,9 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Font-Awesome Embed -->
+    <script src="https://use.fontawesome.com/6bf72a30e2.js"></script>
   </head>
 
   <body>
+    <header>
+      <a href="#" class="site_logo"></a>
+
+      <a href="#" class="site_name">Two is for Joy</a>
+
+      <nav>
+        <%= link_to "Blog", posts_path %>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
