@@ -62,6 +62,22 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "twoisforjoy_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: "https://twoisforjoy.com" }
+
+  config.action_mailer.deliver_method = :smtp
+
+  #TODO: Add real prod settings
+  config.action_mailer.smtp_settings =
+    {
+      address:              'sub5.mail.dreamhost.com',
+      port:                 587,
+      domain:               'twoisforjoy.com',
+      user_name:            'notifications@mywebsite.org',
+      password:             'mypassword',
+      authentication:       :login,
+      enable_starttls_auto: false
+    }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
