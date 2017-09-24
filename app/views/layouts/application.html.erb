@@ -15,12 +15,15 @@
     <header>
       <a href="#" class="site_logo"></a>
 
-      <a href="#" class="site_name">Two is for Joy</a>
+      <%= link_to "Two is for Joy", root_path, class: "site_name" %>
 
       <nav>
         <%= link_to "Blog", posts_path %>
       </nav>
     </header>
+
     <%= yield %>
+
+    <footer></footer>
   </body>
 </html>

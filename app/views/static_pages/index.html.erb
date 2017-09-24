@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="about">
+    <h2>About Me</h2>
+  </div>
+  <div class="blog_posts">
+    <% @posts.each do |post| %>
+      <h3><a href="#"><%= link_to post.title, post %></a></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+  </div>
+</div>
