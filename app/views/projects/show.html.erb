@@ -1,0 +1,9 @@
+<h1><%= @project.title %></h1>
+<%= @project.created_at.strftime("%A, %b %d") %>
+
+<%= markdown @project.content %>
+
+<a href="<%= @project.link %>">See <%= @project.title %> Live</a>
+
+<%= link_to "Edit", edit_project_path(@project) %>
+<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure you want to delete this project?" } %>

@@ -8,4 +8,11 @@
       <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
     <% end %>
   </div>
+
+  <div class="projects">
+    <% @projects.each do |project| %>
+      <h3><a href="#"><%= link_to project.title, project %></a></h3>
+      <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+  </div>
 </div>

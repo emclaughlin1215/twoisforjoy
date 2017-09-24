@@ -1,0 +1,8 @@
+<h1>Stuff What's Built</h1>
+
+<% @projects.each do |project| %>
+  <%= project.created_at.strftime('%A, %b %d') %>
+  <%= link_to project.title, project %>
+<% end %>
+
+<%= will_paginate @posts %>
