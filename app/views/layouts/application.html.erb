@@ -15,21 +15,22 @@
 
   <body>
     <header data-sticky-container>
-      <div class="row" data-sticky data-options="marginTop:0;" style="width:100%">
+      <div class="row align-middle" data-sticky data-options="marginTop:0;" style="width:100%">
         <div class="column">
-          <a href="#" class="site_logo"></a>
+          <a href="#" class="header__logo"></a>
+          <span class="header__personal">Erin McLaughlin</span>
         </div>
 
-        <div class="column">
-          <%= link_to "Two is for Joy", root_path, class: "site_name" %>
+        <div class="column text-center">
+          <%= link_to "Two is for Joy", root_path, class: "header__name" %>
         </div>
 
         <div class="column">
           <nav>
-            <ul class="menu expanded">
-              <li><%= link_to "Things What's Said", posts_path %></li>
-              <li><%= link_to "Things What's Done", projects_path %></li>
-              <li><%= link_to "Things What You Say", new_contact_path %></li>
+            <ul class="menu expanded text-right">
+              <li><%= link_to "Blog", posts_path %></li>
+              <li><%= link_to "Projects", projects_path %></li>
+              <li><%= link_to "Contact", new_contact_path %></li>
             </ul>
           </nav>
         </div>
