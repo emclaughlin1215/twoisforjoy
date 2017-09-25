@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Two is for Joy - Drupal and Rails Web Development</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Two is for Joy - Drupal and Rails Web Development" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <!-- Font-Awesome Embed -->
-    <script src="https://use.fontawesome.com/6bf72a30e2.js"></script>
   </head>
 
   <body>
@@ -20,12 +21,21 @@
       <nav>
         <%= link_to "Things What's Said", posts_path %>
         <%= link_to "Things What's Done", projects_path %>
+        <%= link_to "Things What You Say", new_contacts_path %>
       </nav>
     </header>
 
     <%= yield %>
 
-    <footer></footer>
+    <footer>
+      <% if user_signed_in? %>
+        <%= link_to "Log Out", destroy_user_session_path %>
+      <% else %>
+        <%= link_to "Log In", new_user_session_path %>
+        <%= link_to "New Post", new_post_path %>
+        <%= link_to "New Project", new_project_path %>
+      <% end %>
+    </footer>
 
   </body>
 </html>
