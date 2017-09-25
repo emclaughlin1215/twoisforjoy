@@ -15,16 +15,26 @@
   </head>
 
   <body>
-    <header>
-      <a href="#" class="site_logo"></a>
+    <header data-sticky-container>
+      <div class="row" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="column">
+          <a href="#" class="site_logo"></a>
+        </div>
 
-      <%= link_to "Two is for Joy", root_path, class: "site_name" %>
+        <div class="column">
+          <%= link_to "Two is for Joy", root_path, class: "site_name" %>
+        </div>
 
-      <nav>
-        <%= link_to "Things What's Said", posts_path %>
-        <%= link_to "Things What's Done", projects_path %>
-        <%= link_to "Things What You Say", new_contacts_path %>
-      </nav>
+        <div class="column">
+          <nav>
+            <ul class="menu expanded">
+              <li><%= link_to "Things What's Said", posts_path %></li>
+              <li><%= link_to "Things What's Done", projects_path %></li>
+              <li><%= link_to "Things What You Say", new_contacts_path %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <%= yield %>
