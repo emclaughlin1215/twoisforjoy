@@ -48,6 +48,8 @@ gem 'devise', '~> 4.3'
 # Zurb Foundation
 gem 'foundation-rails', '~> 6.4'
 gem 'foundation-icons-sass-rails'
+# JQuery
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
