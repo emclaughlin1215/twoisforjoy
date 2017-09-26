@@ -10,7 +10,7 @@ header {
 	.header__personal {
 		font-size: map-deep-get($header-styles, small, h1, font-size);
 
-		@media #{$medium-up} {
+		@include breakpoint(medium only) {
 			font-size: map-deep-get($header-styles, medium, h1, font-size);
 		}
 	}
