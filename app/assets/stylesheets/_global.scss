@@ -1,10 +1,14 @@
-.header__name {
-	text-decoration: none;
-	font-size: 3rem;
-	font-family: $logo-font-family;
-	color: $black;
+header {
+	background-color: $white;
+	border-bottom: 1px solid $light-gray;
+	.header__name {
+		text-decoration: none;
+		font-size: 3rem;
+		font-family: $logo-font-family;
+		color: $black;
+	}
+	.header__personal {
+		map-get(map-get($header-styles, 'small'), 'h3');
+	}
 }
 
-.header__personal {
-
-}
