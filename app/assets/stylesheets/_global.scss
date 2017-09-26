@@ -6,7 +6,7 @@ header {
 	.title-bar {
 		background-color: $white;
 		color: $black;
-		.mnenu-icon:after {
+		.menu-icon::after {
 			background-color: $black;
 			box-shadow: 0 7px 0 $black, 0 14px 0 $black;
 		}
