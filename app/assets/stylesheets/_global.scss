@@ -1,7 +1,7 @@
 header {
-	border-bottom: 1px solid $light-gray;
 	& > .row {
 		background-color: $white;
+		border-bottom: 1px solid $light-gray;
 	}
 	.header__name {
 		text-decoration: none;
