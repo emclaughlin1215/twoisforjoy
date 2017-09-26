@@ -8,10 +8,10 @@ header {
 		color: $black;
 	}
 	.header__personal {
-		font-size: map-get(map-get($header-styles, 'small'), 'h3')px;
+		font-size: map-get(map-get($header-styles, 'small'), 'h3') + 'px';
 
 		@media #{$medium-up} {
-			font-size: map-get(map-get($header-styles, 'medium'), 'h3')px;
+			font-size: map-get(map-get($header-styles, 'medium'), 'h3') + 'px';
 		}
 	}
 }
