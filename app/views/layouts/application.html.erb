@@ -25,7 +25,7 @@
           <%= link_to "Two is for Joy", root_path, class: "header__site-name" %>
         </div>
 
-        <div class="title-bar small-2 cell" data-responsive-toggle="main-nav" data-hide-for="medium">
+        <div class="title-bar small-2 cell show-for-small-only" data-responsive-toggle="main-nav">
           <button class="menu-icon" type="button" data-toggle="main-nav"></button>
         </div>
 
@@ -45,7 +45,7 @@
       <%= yield %>
     </main>
 
-    <footer>
+    <footer class="small-11 medium-10" role="footer">
       <% if user_signed_in? %>
         <%= link_to "Log Out", destroy_user_session_path %>
       <% else %>
