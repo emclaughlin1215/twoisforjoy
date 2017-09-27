@@ -13,15 +13,15 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="grid-x grid-margin-x">
     <header data-sticky-container role="banner" aria-label="Site Header">
-      <div class="grid-x grid-margin-x sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
+      <div class="sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
         <div class="cell hide-for-small-only medium-3 header__personal">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
           <span class="header__personal-name">Erin McLaughlin</span>
         </div>
 
-        <div class="cell align-center small-10 medium-4">
+        <div class="cell align-center text-center small-10 medium-4">
           <%= link_to "Two is for Joy", root_path, class: "header__site-name" %>
         </div>
 
@@ -29,9 +29,9 @@
           <button class="menu-icon" type="button" data-toggle="main-nav"></button>
         </div>
 
-        <div class="cell small-12 medium-3 align-center">
+        <div class="cell small-12 medium-3 align-right">
           <nav id="main-nav" data-animate="slide-in-down slide-out-up">
-            <ul class="menu expanded align–center" data-dropdown-menu>
+            <ul class="menu expanded align–center vertical medium-horizontal" data-dropdown-menu>
               <li class="small-12 medium-4"><%= link_to "Blog", posts_path %></li>
               <li class="small-12 medium-4"><%= link_to "Projects", projects_path %></li>
               <li class="small-12 medium-4"><%= link_to "Contact", new_contact_path %></li>
