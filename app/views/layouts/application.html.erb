@@ -13,9 +13,9 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="grid-x grid-margin-x">
+  <body>
     <header data-sticky-container role="banner" aria-label="Site Header">
-      <div class="sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
+      <div class="grid-x grid-margin-x sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
         <div class="cell hide-for-small-only medium-3 header__personal">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
           <span class="header__personal-name">Erin McLaughlin</span>
@@ -41,6 +41,10 @@
       </div>
     </header>
 
+    <div class="hero expanded">
+      <%= image_tag @hero_path, class: "hero__image" %>
+    </div>
+
     <main class="small-11 medium-10" role="main">
       <%= yield %>
     </main>
@@ -48,7 +52,6 @@
     <footer class="small-11 medium-10" role="footer">
       <% if user_signed_in? %>
         <%= link_to "Log Out", destroy_user_session_path %>
-      <% else %>
         <%= link_to "New Post", new_post_path %>
         <%= link_to "New Project", new_project_path %>
       <% end %>
