@@ -15,28 +15,26 @@
 
   <body>
     <header data-sticky-container role="banner" aria-label="Site Header">
-      <div class="row align-middle sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
-        <div class="column hide-for-small-only">
+      <div class="grid-x grid-margin-x align-middle sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="cell hide-for-small-only">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
           <span class="header__personal">Erin McLaughlin</span>
         </div>
 
-        <div class="header__mobile-menu">
-          <div class="column text-center small-10 medium-4">
-            <%= link_to "Two is for Joy", root_path, class: "header__name" %>
-          </div>
-
-          <div class="title-bar small-2" data-responsive-toggle="main-nav" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle="main-nav"></button>
-          </div>
+        <div class="cell text-center small-10 medium-4">
+          <%= link_to "Two is for Joy", root_path, class: "header__name" %>
         </div>
 
-        <div class="column small-12 medium-4">
+        <div class="title-bar small-2" data-responsive-toggle="main-nav" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        </div>
+
+        <div class="cell small-12 medium-4">
           <nav id="main-nav" data-animate="slide-in-down slide-out-up">
             <ul class="menu expanded" data-dropdown-menu>
-              <li><%= link_to "Blog", posts_path %></li>
-              <li><%= link_to "Projects", projects_path %></li>
-              <li><%= link_to "Contact", new_contact_path %></li>
+              <li class="small-12 medium-4"><%= link_to "Blog", posts_path %></li>
+              <li class="small-12 medium-4"><%= link_to "Projects", projects_path %></li>
+              <li class="small-12 medium-4"><%= link_to "Contact", new_contact_path %></li>
             </ul>
           </nav>
         </div>
