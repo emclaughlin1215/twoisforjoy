@@ -24,4 +24,10 @@ header {
 			font-size: unquote(map-deep-get($header-styles, medium, h3, font-size) + 'px');
 		}
 	}
+	.header__mobile-menu {
+		border-bottom: 1px solid $light-gray;
+		@include breakpoint(medium up) {
+			border-bottom: none;
+		}
+	}
 }
