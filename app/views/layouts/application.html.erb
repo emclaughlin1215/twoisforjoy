@@ -16,12 +16,12 @@
   <body>
     <header data-sticky-container role="banner" aria-label="Site Header">
       <div class="grid-x grid-margin-x sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
-        <div class="cell hide-for-small-only medium-4 header__personal">
+        <div class="cell hide-for-small-only medium-3 header__personal">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
           <span class="header__personal-name">Erin McLaughlin</span>
         </div>
 
-        <div class="cell text-center small-10 medium-4">
+        <div class="cell align-center small-10 medium-4">
           <%= link_to "Two is for Joy", root_path, class: "header__site-name" %>
         </div>
 
@@ -29,7 +29,7 @@
           <button class="menu-icon" type="button" data-toggle="main-nav"></button>
         </div>
 
-        <div class="cell small-12 medium-4">
+        <div class="cell small-12 medium-3 align-center">
           <nav id="main-nav" data-animate="slide-in-down slide-out-up">
             <ul class="menu expanded" data-dropdown-menu>
               <li class="small-12 medium-4"><%= link_to "Blog", posts_path %></li>
