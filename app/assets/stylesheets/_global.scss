@@ -22,10 +22,10 @@ header {
 		color: $black;
 	}
 	.header__personal-name {
-		font-size: unquote(map-deep-get($header-styles, small, h4, font-size) + 'px');
+		font-size: unquote(map-deep-get($header-styles, small, h5, font-size) + 'px');
 
 		@include breakpoint(medium up) {
-			font-size: unquote(map-deep-get($header-styles, medium, h4, font-size) + 'px');
+			font-size: unquote(map-deep-get($header-styles, medium, h5, font-size) + 'px');
 		}
 	}
 	.header__logo {
@@ -47,6 +47,18 @@ header {
 			@include xy-cell-offset(1);
 		}
 	}
+}
+
+.hero {
+  background-size: cover;
+  height: 628px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .hero__description {
+  	text-shadow: 1px 1px 2px $white;
+  }
 }
 
 main {

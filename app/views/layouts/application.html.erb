@@ -41,9 +41,25 @@
       </div>
     </header>
 
-    <div class="hero expanded">
-      <%= image_tag @hero_path, class: "hero__image" %>
-    </div>
+    <% if @hero_path %>
+      <div class="hero expanded" style="background: url('<%= @hero_path %>') 50% no-repeat;">
+        
+        <% if @hero_heading or @hero_text %>
+          <div class="hero__description">
+            <% if @hero_heading %>
+              <div class="hero__title">
+                <h1><%= @hero_heading %></h1>
+              </div>
+            <% end %>
+            <% if @hero_text %>
+              <div class="hero__text">
+                <h3><%= @hero_text %></h3>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
 
     <main class="small-11 medium-10" role="main">
       <%= yield %>
