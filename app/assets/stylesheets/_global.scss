@@ -15,13 +15,13 @@ header {
 			box-shadow: 0 7px 0 $black, 0 14px 0 $black;
 		}
 	}
-	.header__name {
+	.header__site-name {
 		text-decoration: none;
 		font-size: 3rem;
 		font-family: $logo-font-family;
 		color: $black;
 	}
-	.header__personal {
+	.header__personal-name {
 		font-size: unquote(map-deep-get($header-styles, small, h3, font-size) + 'px');
 
 		@include breakpoint(medium up) {
@@ -40,5 +40,8 @@ header {
 		@include breakpoint(medium up) {
 			border-bottom: none;
 		}
+	}
+	.header__personal {
+		@include xy-cell-offset(1);
 	}
 }

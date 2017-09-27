@@ -16,13 +16,13 @@
   <body>
     <header data-sticky-container role="banner" aria-label="Site Header">
       <div class="grid-x grid-margin-x sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
-        <div class="cell hide-for-small-only medium-4">
+        <div class="cell hide-for-small-only medium-4 header__personal">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
-          <span class="header__personal">Erin McLaughlin</span>
+          <span class="header__personal-name">Erin McLaughlin</span>
         </div>
 
         <div class="cell text-center small-10 medium-4">
-          <%= link_to "Two is for Joy", root_path, class: "header__name" %>
+          <%= link_to "Two is for Joy", root_path, class: "header__site-name" %>
         </div>
 
         <div class="title-bar small-2" data-responsive-toggle="main-nav" data-hide-for="medium">
