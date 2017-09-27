@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <header data-sticky-container>
+    <header data-sticky-container role="banner" aria-label="Site Header">
       <div class="row align-middle sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;" style="width:100%">
         <div class="column hide-for-small-only">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
@@ -31,7 +31,7 @@
 
         <div class="column small-12 medium-4">
           <nav id="main-nav" data-animate="slide-in-down slide-out-up">
-            <ul class="menu expanded text-right" data-dropdown-menu>
+            <ul class="menu expanded" data-dropdown-menu>
               <li><%= link_to "Blog", posts_path %></li>
               <li><%= link_to "Projects", projects_path %></li>
               <li><%= link_to "Contact", new_contact_path %></li>
@@ -41,7 +41,7 @@
       </div>
     </header>
 
-    <main class="small-12 medium-10">
+    <main class="small-11 medium-10" role="main">
       <%= yield %>
     </main>
 
