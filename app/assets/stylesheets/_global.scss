@@ -1,7 +1,11 @@
 header {
-	& > .row {
+	& > .grid-x {
 		background-color: $white;
 		border-bottom: 1px solid $light-gray;
+	}
+	.cell {
+		display: flex;
+  	align-items: center;
 	}
 	.title-bar {
 		background-color: $white;
@@ -22,6 +26,13 @@ header {
 
 		@include breakpoint(medium up) {
 			font-size: unquote(map-deep-get($header-styles, medium, h3, font-size) + 'px');
+		}
+	}
+	.header__logo {
+		display: inline-block;
+		img {
+			width: 50px;
+			height: 50px;
 		}
 	}
 	.header__mobile-menu {
