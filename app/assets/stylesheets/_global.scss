@@ -41,7 +41,15 @@ header {
 			border-bottom: none;
 		}
 	}
-	.header__personal {
+	.grid-margin-x.header__personal {
+		@include breakpoint(medium up) {
+			@include xy-cell-offset(1);
+		}
+	}
+}
+
+main {
+	@include breakpoint(medium up) {
 		@include xy-cell-offset(1);
 	}
 }
