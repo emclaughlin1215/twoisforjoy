@@ -42,11 +42,6 @@ header {
 			background-color: map-get($foundation-palette, primary);
 		}
 	}
-	.grid-margin-x .header__personal {
-		@include breakpoint(medium up) {
-			@include xy-cell-offset(1);
-		}
-	}
 }
 
 .hero {

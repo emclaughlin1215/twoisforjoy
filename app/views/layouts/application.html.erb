@@ -6,7 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Two is for Joy - Drupal and Rails Web Development" %></title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Special+Elite" rel="stylesheet">
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -15,8 +15,9 @@
 
   <body>
     <header data-sticky-container role="banner" aria-label="Site Header">
+      <div class="grid-container">
       <div class="grid-x grid-margin-x sticky is-at-top is-anchored" data-sticky data-options="marginTop:0;">
-        <div class="cell hide-for-small-only medium-3 header__personal">
+        <div class="cell hide-for-small-only medium-4 header__personal">
           <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
           <span class="header__personal-name">Erin McLaughlin</span>
         </div>
@@ -29,7 +30,7 @@
           <button class="menu-icon" type="button" data-toggle="main-nav"></button>
         </div>
 
-        <div class="cell small-12 medium-3 align-right">
+        <div class="cell small-12 medium-4 align-right">
           <nav id="main-nav" data-animate="slide-in-down slide-out-up">
             <ul class="menu expanded align–center vertical medium-horizontal" data-dropdown-menu>
               <li class="small-12 medium-4"><%= link_to "Blog", posts_path %></li>
@@ -39,6 +40,7 @@
           </nav>
         </div>
       </div>
+    </div>
     </header>
 
     <% if @hero_path %>
@@ -61,7 +63,7 @@
       </div>
     <% end %>
 
-    <main class="small-11 medium-10" role="main">
+    <main class="grid-container" role="main">
       <%= yield %>
     </main>
 
