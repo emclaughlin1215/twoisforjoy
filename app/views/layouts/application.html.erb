@@ -15,29 +15,31 @@
 
   <body>
     <header data-sticky-container role="banner" aria-label="Site Header">
-      <div class="grid-container sticky is-at-top is-anchored header" data-sticky data-options="marginTop:0;">
-        <div class="grid-x">
-          <div class="cell hide-for-small-only medium-4 header__personal">
-            <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
-            <span class="header__personal-name">Erin McLaughlin</span>
-          </div>
+      <div class="sticky is-at-top is-anchored header" data-sticky data-options="marginTop:0;">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="cell hide-for-small-only medium-4 header__personal">
+              <a href="/" class="header__logo"><%= image_tag "logo.png" %></a>
+              <span class="header__personal-name">Erin McLaughlin</span>
+            </div>
 
-          <div class="cell align-center text-center small-10 medium-4">
-            <%= link_to "Two is for Joy", root_path, class: "header__site-name" %>
-          </div>
+            <div class="cell align-center text-center small-10 medium-4">
+              <%= link_to "Two is for Joy", root_path, class: "header__site-name" %>
+            </div>
 
-          <div class="title-bar small-2 cell show-for-small-only" data-responsive-toggle="main-nav">
-            <button class="menu-icon" type="button" data-toggle="main-nav"></button>
-          </div>
+            <div class="title-bar small-2 cell show-for-small-only" data-responsive-toggle="main-nav">
+              <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+            </div>
 
-          <div class="cell small-12 medium-4 align-right">
-            <nav id="main-nav" data-animate="slide-in-down slide-out-up">
-              <ul class="menu expanded align–center vertical medium-horizontal" data-dropdown-menu>
-                <li class="small-12 medium-4"><%= link_to "Blog", posts_path %></li>
-                <li class="small-12 medium-4"><%= link_to "Projects", projects_path %></li>
-                <li class="small-12 medium-4"><%= link_to "Contact", new_contact_path %></li>
-              </ul>
-            </nav>
+            <div class="cell small-12 medium-4 align-right">
+              <nav id="main-nav" data-animate="slide-in-down slide-out-up">
+                <ul class="menu expanded align–center vertical medium-horizontal" data-dropdown-menu>
+                  <li class="small-12 medium-4"><%= link_to "Blog", posts_path %></li>
+                  <li class="small-12 medium-4"><%= link_to "Projects", projects_path %></li>
+                  <li class="small-12 medium-4"><%= link_to "Contact", new_contact_path %></li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
