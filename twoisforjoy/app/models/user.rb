@@ -10,6 +10,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_secure_token
 
   def generate_api_key
     loop do
@@ -17,4 +18,31 @@ class User < ApplicationRecord
       break token unless User.exists?(api_key: token)
     end
   end
+
+  def self.valid_login?(email, password)
+    user = User.find_by(email: email)
+    if user && user.authenticate(password)
+      user
+    end
+  end
+
+  def allow_token_to_be_used_only_once
+    regenerate_token
+    touch(:token_created_at)
+  end
+
+  def logout
+    invalidate_token
+  end
+
+  def with_unexpired_token(token, period)
+    where(token: token).where('token_created_at >= ?', period).first
+  end
+
+  private
+
+    def invalidate_token
+      self.update_columns(token: nil)
+      touch(:token_created_at)
+    end
 end

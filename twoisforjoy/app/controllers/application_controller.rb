@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Serialization
+  include ActionController::HttpAuthentication::Token::ControllerMethods
   before_action :authenticate_request, except: [:index, :show]
   attr_reader :current_user
 
@@ -11,7 +12,7 @@ class ApplicationController < ActionController::API
 
     def authenticate_token
       authenticate_with_http_token do |token, options|
-        @current_user = User.find_by(api_key: token)
+        @current_user = User.find_by(token: token)
       end
     end
 
