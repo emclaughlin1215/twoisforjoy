@@ -19,9 +19,9 @@ class Api::V1::ApiController < ApplicationController
     def authenticate_token
       authenticate_with_http_token do |token, options|
         if user = User.with_unexpired_token(token, 2.days.ago)
-          ActiveSupport::SecurityUtils.compare(
+          ActiveSupport::SecurityUtils.secure_compare(
             ::Digest::SHA256.hexdigest(token),
-            ::Digest::SHA256.hexdigests(user.token))
+            ::Digest::SHA256.hexdigest(user.token))
           user
         end
       end

@@ -35,7 +35,7 @@ class User < ApplicationRecord
     invalidate_token
   end
 
-  def with_unexpired_token(token, period)
+  def self.with_unexpired_token(token, period)
     where(token: token).where('token_created_at >= ?', period).first
   end
 

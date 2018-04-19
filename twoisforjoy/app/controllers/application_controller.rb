@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
   private
 
     def authenticate_request
-      authenticate_token || render_unauthorized
+      authenticate_token || render_unauthorized("Access denied")
     end
 
     def authenticate_token
