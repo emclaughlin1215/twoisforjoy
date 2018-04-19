@@ -1,7 +1,4 @@
 class User < ApplicationRecord
-  before_create do |user|
-    user.api_key = user.generate_api_key
-  end
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 255 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -11,13 +8,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_token
-
-  def generate_api_key
-    loop do
-      token = SecureRandom.base64.tr('+/=', 'Qrt')
-      break token unless User.exists?(api_key: token)
-    end
-  end
+  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }
 
   def self.valid_login?(email, password)
     user = User.find_by(email: email)
