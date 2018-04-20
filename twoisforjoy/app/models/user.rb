@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_token
-  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }
+  mount_uploader :picture, PictureUploader
 
   def self.valid_login?(email, password)
     user = User.find_by(email: email)
