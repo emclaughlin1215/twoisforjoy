@@ -26,13 +26,8 @@ ActiveRecord::Schema.define(version: 2018_04_20_132300) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.string "api_key"
     t.string "token"
     t.datetime "token_created_at"
-    t.string "picture_file_name"
-    t.string "picture_content_type"
-    t.integer "picture_file_size"
-    t.datetime "picture_updated_at"
     t.string "picture"
     t.index ["token", "token_created_at", "email"], name: "index_users_on_token_and_token_created_at_and_email"
   end

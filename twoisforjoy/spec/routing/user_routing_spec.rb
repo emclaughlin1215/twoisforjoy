@@ -5,10 +5,6 @@ RSpec.describe "routes to the users controller", :type => :routing do
     expect(:get => api_v1_user_path(1)).to route_to(:controller => "api/v1/users", :action => "show", :id  => "1")
   end
 
-  it "allows access to #edit" do
-    expect(:get => edit_api_v1_user_path(1)).to route_to(:controller => "api/v1/users", :action => "edit", :id  => "1")
-  end
-
   it "allows access to #update" do
     expect(:patch => api_v1_user_path(1)).to route_to(:controller => "api/v1/users", :action => "update", :id  => "1")
   end

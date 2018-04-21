@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, :type => :user do
   before(:each) do
-    @user = described_class.new(name: "Erin McLaughlin", 
-                                email: "test@example.com", 
-                                password: "testtest", 
+    @user = described_class.new(name: "Test",
+                                email: "test@example.com",
+                                password: "testtest",
                                 password_confirmation: "testtest")
   end
 
