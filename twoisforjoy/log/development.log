@@ -2171,3 +2171,1859 @@ Completed 200 OK in 464ms (Views: 3.8ms | ActiveRecord: 292.8ms)
   [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `token`) VALUES ('Test', 'test@test.com', '2018-04-21 05:27:05', '2018-04-21 05:27:05', '$2a$10$EwyerJ/gOMe8.nZLYF25O.midOMRBLXQkahiobvdaFxKrBowEiSWy', 'NKfus3dXzLREUE4F1JcKjH6Z')[0m
   [1m[35m (117.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (127.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (1254.4ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (11.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'deron@example.org' LIMIT 1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `token`, `description`) VALUES ('Deron', 'deron@example.org', '2018-04-21 12:09:20', '2018-04-21 12:09:20', '$2a$10$kYx2iuvBRG6qe.XbcOIdrOgZz4mEzca7wWVmK52I3sCLA2hju6PEW', 'VBq743caeuH6zXVnVowPFWTr', 'Qui et nemo sint. Error alias quae dolores omnis. Voluptate fugiat dicta commodi. Quis consectetur quia et consequatur explicabo autem. Id voluptatem eaque quaerat rem labore aut ab. Voluptatem rerum eius nihil vitae earum. Perspiciatis quos totam illo.')[0m
+  [1m[35m (48.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'jessica@example.net' LIMIT 1[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `token`, `description`) VALUES ('Jessica', 'jessica@example.net', '2018-04-21 12:10:25', '2018-04-21 12:10:25', '$2a$10$10QqKrkskwLvTJJtL1hoH.CXQPW52Gaqw2eqlXucp00oc0DtK0wmS', 'buremPaB8uQGhictzJs4wn4j', '[\"Aperiam nobis explicabo reiciendis qui id. Ut culpa dicta soluta tempora. Ut occaecati in ex enim ratione mollitia nulla. Corrupti voluptatum est. Aspernatur commodi minima quos molestias.\", \"Molestias molestiae illo culpa recusandae. Animi quae soluta excepturi quidem. Quia ullam dolores facilis laborum qui et.\", \"Quia ex error aperiam blanditiis perferendis architecto. Excepturi voluptatem magnam tempora et occaecati. Doloribus eum saepe.\", \"Eos natus fuga illo. Molestiae explicabo sunt facere. Quia alias nam maxime. Id deleniti velit qui sint aliquam vitae ullam.\", \"Deserunt voluptas et harum excepturi esse reiciendis enim. Blanditiis et eaque nam cum animi. Cum officiis aut autem. In laboriosam eligendi consequatur quia.\", \"Voluptates qui voluptatum ipsam. Architecto animi eveniet. Quia quis animi et id reiciendis. Est distinctio ipsam soluta quae porro. Ut modi voluptatem distinctio.\"]')[0m
+  [1m[35m (149.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'sean@example.com' LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `token`, `picture`, `description`) VALUES ('Sean', 'sean@example.com', '2018-04-21 12:15:30', '2018-04-21 12:15:30', '$2a$10$AiU03RlkERypjk3TCaBT3.HO4pYcSNM7b2qg5FJh4aQ5NqQK.pCB.', 'oCHAa5EsR3piaGEw3rqB8gRJ', NULL, '[\"Aliquam autem ut. Magni dolorem labore impedit in ex. Impedit sunt provident. Placeat totam qui. Quos aut eos autem voluptatem velit recusandae.\", \"Et asperiores amet. Ducimus quia et dolorem inventore cum. Sed laboriosam officia.\", \"Et quaerat saepe quia et. Enim ea nam eum maxime tempora est cumque. Consectetur ab minus est necessitatibus velit. Quis dolores qui. Nam beatae qui libero unde dicta.\", \"Est facere optio blanditiis voluptatem ducimus. Quia pariatur enim sunt accusamus quidem ipsam. Est ad doloremque rerum eveniet. Vel sequi iusto.\", \"Inventore fuga aut optio nam omnis molestiae repudiandae. Non omnis aspernatur sint nisi. Corporis labore dolore nostrum.\", \"Dolorum provident voluptas voluptatem. Eaque dolorum est et facere hic sed. Beatae quaerat quis architecto est at non quis. Hic odit et fugiat iusto sed fugit. Expedita ut aliquid nihil suscipit vel labore.\"]')[0m
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (98.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'genesis@example.net' LIMIT 1[0m
+  [1m[36mUser Create (43.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `token`, `picture`, `description`) VALUES ('Genesis', 'genesis@example.net', '2018-04-21 15:24:26', '2018-04-21 15:24:26', '$2a$10$WKEzjwv0e.5bCpdXYQmZx.G6bFN.Vc8LctqNyKtUSXT2NVhZl5hmy', 'Stf7prDSPfELQd2Cp7DyTNDf', '300.jpeg', '[\"Veritatis blanditiis earum libero. Id ratione aliquid. Dolorum vitae magnam sunt in. Sit facilis et est.\", \"Explicabo rem nisi delectus tempora. Eum eius quia veniam qui. Eum ut ut qui est.\", \"Iusto consequuntur excepturi. Nostrum dolor similique autem vel magni sit. Eos facilis nihil.\", \"Molestiae et nobis modi nesciunt. Et voluptas quaerat harum natus sit. Distinctio ab culpa dolores id voluptatem sint. Fugit soluta sunt quidem quaerat rerum a modi.\", \"Totam et dolores nihil. Eum expedita exercitationem. Libero tempora quibusdam voluptate quidem id. Repellendus nemo voluptatem et sunt necessitatibus. Dolor esse voluptatem rerum.\", \"Eveniet ipsum architecto omnis id est rerum aut. Dolorem eaque dolorem voluptas magni. Consequatur vel eum eligendi voluptatem ea. Asperiores laudantium sit iste necessitatibus distinctio cum.\"]')[0m
+  [1m[35m (126.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (27.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (137.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'maryse@example.com' LIMIT 1[0m
+  [1m[36mUser Create (40.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `token`, `picture`, `description`) VALUES ('Maryse', 'maryse@example.com', '2018-04-21 16:01:08', '2018-04-21 16:01:08', '$2a$10$iJRQ5fbikMwpb.iPibepLunFB5MQGdUMAUWihiIRegVYCLIth32gS', '2S4YSjLYi5vpmkrST3ACnG45', '300.jpeg', '[\"Quisquam blanditiis omnis qui. Sit ducimus iusto velit asperiores rerum neque quaerat. Aut officiis voluptatem harum ut.\", \"Voluptate excepturi facere rerum ratione consectetur amet. Mollitia beatae reiciendis nobis enim. Commodi consequatur dolor nostrum eius harum et id. Placeat natus recusandae deleniti tempore maiores qui fugiat. Reprehenderit ipsa fugiat et et optio.\", \"Aut rem non. Cumque odio sint quasi architecto sunt id. Non aut et. Facere numquam laudantium. Enim quo sunt at inventore impedit nisi.\", \"Quam quisquam quae cupiditate est vitae. Recusandae dolore veritatis dolores voluptatum est. Autem laborum rerum hic. Harum sapiente ut voluptatem autem quia. Aspernatur voluptas rerum ducimus dolorem.\", \"Recusandae est aliquid rerum sunt iusto culpa. Ut eveniet non sed atque numquam. Nam eaque qui tempora. Eius non aut et.\", \"Nesciunt facilis est. Quia molestiae quisquam enim omnis. Id et rerum. Non explicabo adipisci aspernatur perspiciatis minus cupiditate earum.\"]')[0m
+  [1m[35m (90.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (29.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (22.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (33.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 1 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 2 LIMIT 1[0m
+  [1m[36mUser Update (40.5ms)[0m  [1m[33mUPDATE `users` SET `password_digest` = '$2a$10$iCspf.VloMYEtcGkTpgSFuhqSEjMgfDm0Q49qI91jS6AXXTqGP7tu', `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:09:10' WHERE `users`.`id` = 2[0m
+  [1m[35m (109.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 3 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 5 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 6 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 7 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@example.com' AND `users`.`id` != 1 LIMIT 1[0m
+  [1m[36mUser Update (30.3ms)[0m  [1m[33mUPDATE `users` SET `id` = 7, `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:21' WHERE `users`.`id` = 1[0m
+  [1m[35m (88.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@example.com' AND `users`.`id` != 1 LIMIT 1[0m
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:43' WHERE `users`.`id` = 1[0m
+  [1m[35m (58.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 2 LIMIT 1[0m
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:43' WHERE `users`.`id` = 2[0m
+  [1m[35m (91.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'deron@example.org' AND `users`.`id` != 3 LIMIT 1[0m
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:43' WHERE `users`.`id` = 3[0m
+  [1m[35m (53.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'jessica@example.net' AND `users`.`id` != 4 LIMIT 1[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:44' WHERE `users`.`id` = 4[0m
+  [1m[35m (71.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'sean@example.com' AND `users`.`id` != 5 LIMIT 1[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:44' WHERE `users`.`id` = 5[0m
+  [1m[35m (73.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'genesis@example.net' AND `users`.`id` != 6 LIMIT 1[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:44' WHERE `users`.`id` = 6[0m
+  [1m[35m (114.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'maryse@example.com' AND `users`.`id` != 7 LIMIT 1[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:11:44' WHERE `users`.`id` = 7[0m
+  [1m[35m (75.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (167.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (78.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@example.com' AND `users`.`id` != 1 LIMIT 1[0m
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:08' WHERE `users`.`id` = 1[0m
+  [1m[35m (141.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 2 LIMIT 1[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:08' WHERE `users`.`id` = 2[0m
+  [1m[35m (82.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'deron@example.org' AND `users`.`id` != 3 LIMIT 1[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:09' WHERE `users`.`id` = 3[0m
+  [1m[35m (71.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'jessica@example.net' AND `users`.`id` != 4 LIMIT 1[0m
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:09' WHERE `users`.`id` = 4[0m
+  [1m[35m (70.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'sean@example.com' AND `users`.`id` != 5 LIMIT 1[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:09' WHERE `users`.`id` = 5[0m
+  [1m[35m (73.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'genesis@example.net' AND `users`.`id` != 6 LIMIT 1[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:09' WHERE `users`.`id` = 6[0m
+  [1m[35m (67.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'maryse@example.com' AND `users`.`id` != 7 LIMIT 1[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE `users` SET `picture` = '300.jpeg', `updated_at` = '2018-04-21 16:15:09' WHERE `users`.`id` = 7[0m
+  [1m[35m (78.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/login.json" for 127.0.0.1 at 2018-04-21 12:34:16 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/emclaughlin/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/emclaughlin/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' LIMIT 1[0m
+  ↳ app/models/user.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'test@test.com' AND `users`.`id` != 2 LIMIT 1[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Update (93.6ms)[0m  [1m[33mUPDATE `users` SET `token` = 'XCmZvFydCfYt8q2JKKiWhJKJ', `updated_at` = '2018-04-21 16:34:16' WHERE `users`.`id` = 2[0m
+  ↳ app/models/user.rb:21
+  [1m[35m (66.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (49.2ms)[0m  [1m[33mUPDATE `users` SET `updated_at` = '2018-04-21 16:34:16', `token_created_at` = '2018-04-21 16:34:16' WHERE `users`.`id` = 2[0m
+  ↳ app/models/user.rb:22
+  [1m[35m (81.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:22
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.62ms)
+Completed 200 OK in 585ms (Views: 91.4ms | ActiveRecord: 305.0ms)
+
+
+Started GET "/api/v1/users/1/edit" for 127.0.0.1 at 2018-04-21 12:35:40 -0400
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for Api::V1::UsersController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-attack (5.2.0) lib/rack/attack.rb:165:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users/1" for 127.0.0.1 at 2018-04-21 12:36:00 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:7
+  [1m[36mUser Load (45.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`token` = 'XCmZvFydCfYt8q2JKKiWhJKJ' AND (token_created_at >= '2018-04-19 16:36:00.393355') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/models/user.rb:30
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (8.67ms)
+Completed 200 OK in 101ms (Views: 48.3ms | ActiveRecord: 46.5ms)
+
+
+  [1m[35m (125.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421205342)
+  [1m[35m (509.5ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180421205342_create_tags.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (8.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421205342')[0m
+  ↳ bin/rails:9
+  [1m[35m (88.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421205422)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421205422)
+  [1m[35m (592.6ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `project_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_project_id`  (`project_id`), CONSTRAINT `fk_rails_9fcd2e236b`
+FOREIGN KEY (`tag_id`)
+  REFERENCES `tags` (`id`)
+, CONSTRAINT `fk_rails_e1d638f7e4`
+FOREIGN KEY (`project_id`)
+  REFERENCES `projects` (`id`)
+)[0m
+  ↳ db/migrate/20180421205422_create_taggings.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421205422')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (127.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1767.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (538.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (433.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (398.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (45.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (304.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (105.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (734.6ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (842.7ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (423.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (818.5ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (220.4ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (221.4ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (342.9ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (402.6ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (57.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (699.3ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (745.3ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 21:52:16', '2018-04-21 21:52:16')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421215549)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421215549)
+  [1m[35m (380.0ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:4
+  [1m[35m (696.3ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `taggable_type` varchar(255), `taggable_id` bigint, `tagger_type` varchar(255), `tagger_id` bigint, `context` varchar(128), `created_at` datetime,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_taggable_type_and_taggable_id`  (`taggable_type`, `taggable_id`),  INDEX `index_taggings_on_tagger_type_and_tagger_id`  (`tagger_type`, `tagger_id`))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:8
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1393.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (61.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (519.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (390.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (529.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (56.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (338.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (103.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (847.1ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (44.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (805.7ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (336.9ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (54.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (755.4ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (230.0ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (231.4ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (243.7ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (49.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (412.5ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (45.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (735.0ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (55.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (797.6ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (62.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421215549)
+  [1m[35m (341.8ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:4
+  [1m[35m (510.0ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `taggable_type` varchar(255), `taggable_id` bigint, `tagger_type` varchar(255), `tagger_id` bigint, `context` varchar(128), `created_at` datetime,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_taggable_type_and_taggable_id`  (`taggable_type`, `taggable_id`),  INDEX `index_taggings_on_tagger_type_and_tagger_id`  (`tagger_type`, `tagger_id`))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421215549)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (689.7ms)[0m  [1m[35mALTER TABLE `users` DROP COLUMN `description`[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (80.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180421120307'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:02:41', '2018-04-21 22:02:41')[0m
+  ↳ bin/rails:9
+  [1m[35m (44.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1268.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (57.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (526.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (477.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (499.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (372.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (384.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (646.9ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (45.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (813.3ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (329.8ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (837.3ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (227.9ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (196.2ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (240.2ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (45.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (375.7ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (46.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (722.4ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (52.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (723.0ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (58.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421215549)
+  [1m[35m (360.9ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:4
+  [1m[35m (524.8ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `taggable_type` varchar(255), `taggable_id` bigint, `tagger_type` varchar(255), `tagger_id` bigint, `context` varchar(128), `created_at` datetime,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_taggable_type_and_taggable_id`  (`taggable_type`, `taggable_id`),  INDEX `index_taggings_on_tagger_type_and_tagger_id`  (`tagger_type`, `tagger_id`))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (702.5ms)[0m  [1m[35mALTER TABLE `users` DROP COLUMN `description`[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (53.2ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180421120307'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:05:20', '2018-04-21 22:05:20')[0m
+  ↳ bin/rails:9
+  [1m[35m (54.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1394.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (60.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (397.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (456.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (363.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (46.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (384.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (94.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (867.0ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (858.1ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (299.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (54.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (753.8ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (220.9ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (221.0ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (276.6ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (387.3ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (57.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (702.6ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (45.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (711.5ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (75.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421215549)
+  [1m[35m (455.9ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:4
+  [1m[35m (824.0ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `taggable_type` varchar(255), `taggable_id` bigint, `tagger_type` varchar(255), `tagger_id` bigint, `context` varchar(128), `created_at` datetime,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_taggable_type_and_taggable_id`  (`taggable_type`, `taggable_id`),  INDEX `index_taggings_on_tagger_type_and_tagger_id`  (`tagger_type`, `tagger_id`))[0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:8
+  [1m[35m (297.7ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  ↳ db/migrate/20180421215549_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421215549')[0m
+  ↳ bin/rails:9
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddMissingUniqueIndices (20180421215550)
+  [1m[35m (421.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_tags_on_name`  ON `tags` (`name`) [0m
+  ↳ db/migrate/20180421215550_add_missing_unique_indices.acts_as_taggable_on_engine.rb:4
+  [1m[35m (313.3ms)[0m  [1m[35mDROP INDEX `index_taggings_on_tag_id` ON `taggings`[0m
+  ↳ db/migrate/20180421215550_add_missing_unique_indices.acts_as_taggable_on_engine.rb:6
+  [1m[35m (221.4ms)[0m  [1m[35mDROP INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context` ON `taggings`[0m
+  ↳ db/migrate/20180421215550_add_missing_unique_indices.acts_as_taggable_on_engine.rb:7
+  [1m[35m (387.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `taggings_idx`  ON `taggings` (`tag_id`, `taggable_id`, `taggable_type`, `context`, `tagger_id`, `tagger_type`) [0m
+  ↳ db/migrate/20180421215550_add_missing_unique_indices.acts_as_taggable_on_engine.rb:8
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421215550')[0m
+  ↳ bin/rails:9
+  [1m[35m (54.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTaggingsCounterCacheToTags (20180421215551)
+  [1m[35m (1318.6ms)[0m  [1m[35mALTER TABLE `tags` ADD `taggings_count` int DEFAULT 0[0m
+  ↳ db/migrate/20180421215551_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb:4
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` ORDER BY `tags`.`id` ASC LIMIT 1000[0m
+  ↳ db/migrate/20180421215551_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421215551')[0m
+  ↳ bin/rails:9
+  [1m[35m (119.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddMissingTaggableIndex (20180421215552)
+  [1m[35m (517.9ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  ↳ db/migrate/20180421215552_add_missing_taggable_index.acts_as_taggable_on_engine.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421215552')[0m
+  ↳ bin/rails:9
+  [1m[35m (57.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ChangeCollationForTagNames (20180421215553)
+  [1m[35m (1171.1ms)[0m  [1m[35mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  ↳ db/migrate/20180421215553_change_collation_for_tag_names.acts_as_taggable_on_engine.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421215553')[0m
+  ↳ bin/rails:9
+  [1m[35m (85.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddMissingIndexes (20180421215554)
+  [1m[35m (329.8ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tag_id`  ON `taggings` (`tag_id`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:4
+  [1m[35m (419.8ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_id`  ON `taggings` (`taggable_id`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:5
+  [1m[35m (332.4ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_type`  ON `taggings` (`taggable_type`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:6
+  [1m[35m (331.3ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tagger_id`  ON `taggings` (`tagger_id`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:7
+  [1m[35m (431.5ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_context`  ON `taggings` (`context`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:8
+  [1m[35m (320.1ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tagger_id_and_tagger_type`  ON `taggings` (`tagger_id`, `tagger_type`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:10
+  [1m[35m (387.0ms)[0m  [1m[35mCREATE  INDEX `taggings_idy`  ON `taggings` (`taggable_id`, `taggable_type`, `tagger_id`, `context`) [0m
+  ↳ db/migrate/20180421215554_add_missing_indexes.acts_as_taggable_on_engine.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421215554')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:06:11', '2018-04-21 22:06:11')[0m
+  ↳ bin/rails:9
+  [1m[35m (47.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1289.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (396.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (411.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (349.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (74.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (337.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (94.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (846.0ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (856.7ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (328.4ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (106.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (867.4ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (218.7ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (218.8ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (361.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (364.4ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (58.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (912.3ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (857.2ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:08:07', '2018-04-21 22:08:07')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to ActsAsTaggableOnMigration (20180421220857)
+  [1m[35m (879.8ms)[0m  [1m[35mCREATE TABLE `tags` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  ↳ db/migrate/20180421220857_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:9
+  [1m[35m (382.1ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` int, `taggable_type` varchar(255), `taggable_id` int, `tagger_type` varchar(255), `tagger_id` int, `context` varchar(128), `created_at` datetime) ENGINE=InnoDB[0m
+  ↳ db/migrate/20180421220857_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:13
+  [1m[35m (312.4ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tag_id`  ON `taggings` (`tag_id`) [0m
+  ↳ db/migrate/20180421220857_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:28
+  [1m[35m (275.8ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  ↳ db/migrate/20180421220857_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb:29
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421220857')[0m
+  ↳ bin/rails:9
+  [1m[35m (46.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddMissingUniqueIndices (20180421220858)
+  [1m[35m (394.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_tags_on_name`  ON `tags` (`name`) [0m
+  ↳ db/migrate/20180421220858_add_missing_unique_indices.acts_as_taggable_on_engine.rb:9
+  [1m[35m (229.1ms)[0m  [1m[35mDROP INDEX `index_taggings_on_tag_id` ON `taggings`[0m
+  ↳ db/migrate/20180421220858_add_missing_unique_indices.acts_as_taggable_on_engine.rb:11
+  [1m[35m (220.6ms)[0m  [1m[35mDROP INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context` ON `taggings`[0m
+  ↳ db/migrate/20180421220858_add_missing_unique_indices.acts_as_taggable_on_engine.rb:12
+  [1m[35m (387.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `taggings_idx`  ON `taggings` (`tag_id`, `taggable_id`, `taggable_type`, `context`, `tagger_id`, `tagger_type`) [0m
+  ↳ db/migrate/20180421220858_add_missing_unique_indices.acts_as_taggable_on_engine.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421220858')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTaggingsCounterCacheToTags (20180421220859)
+  [1m[35m (665.8ms)[0m  [1m[35mALTER TABLE `tags` ADD `taggings_count` int DEFAULT 0[0m
+  ↳ db/migrate/20180421220859_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb:9
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` ORDER BY `tags`.`id` ASC LIMIT 1000[0m
+  ↳ db/migrate/20180421220859_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421220859')[0m
+  ↳ bin/rails:9
+  [1m[35m (175.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddMissingTaggableIndex (20180421220860)
+  [1m[35m (287.9ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  ↳ db/migrate/20180421220860_add_missing_taggable_index.acts_as_taggable_on_engine.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421220860')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ChangeCollationForTagNames (20180421220861)
+  [1m[35m (1193.8ms)[0m  [1m[35mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  ↳ db/migrate/20180421220861_change_collation_for_tag_names.acts_as_taggable_on_engine.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421220861')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddMissingIndexesOnTaggings (20180421220862)
+  [1m[35m (424.7ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tag_id`  ON `taggings` (`tag_id`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:9
+  [1m[35m (290.8ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_id`  ON `taggings` (`taggable_id`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:10
+  [1m[35m (325.8ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_taggable_type`  ON `taggings` (`taggable_type`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:11
+  [1m[35m (384.3ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tagger_id`  ON `taggings` (`tagger_id`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:12
+  [1m[35m (329.1ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_context`  ON `taggings` (`context`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:13
+  [1m[35m (455.3ms)[0m  [1m[35mCREATE  INDEX `index_taggings_on_tagger_id_and_tagger_type`  ON `taggings` (`tagger_id`, `tagger_type`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:16
+  [1m[35m (413.7ms)[0m  [1m[35mCREATE  INDEX `taggings_idy`  ON `taggings` (`taggable_id`, `taggable_type`, `tagger_id`, `context`) [0m
+  ↳ db/migrate/20180421220862_add_missing_indexes_on_taggings.acts_as_taggable_on_engine.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421220862')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (55.8ms)[0m  [1m[35mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (36.4ms)[0m  [1m[35mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (72.1ms)[0m  [1m[35mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (54.3ms)[0m  [1m[35mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  ↳ config/initializers/acts_as_taggable_on.rb:2
+  [1m[35m (19.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (59.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1680.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (64.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (347.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (438.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (26.0ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (451.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (94.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (109.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (326.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (107.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (970.5ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (857.3ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (332.1ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (56.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (856.4ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (229.8ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (231.1ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (267.3ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (357.9ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (45.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (753.3ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (709.2ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:32:46', '2018-04-21 22:32:46')[0m
+  ↳ bin/rails:9
+  [1m[35m (59.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421224536)
+  [1m[35m (423.4ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180421224536_create_tags.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421224536')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (602.7ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `project_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_project_id`  (`project_id`), CONSTRAINT `fk_rails_9fcd2e236b`
+FOREIGN KEY (`tag_id`)
+  REFERENCES `tags` (`id`)
+, CONSTRAINT `fk_rails_e1d638f7e4`
+FOREIGN KEY (`project_id`)
+  REFERENCES `projects` (`id`)
+)[0m
+  ↳ db/migrate/20180421224612_create_taggings.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421224612')[0m
+  ↳ bin/rails:9
+  [1m[35m (54.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (179.6ms)[0m  [1m[35mDROP TABLE `taggings`[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (71.2ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180421224612'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (566.5ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `project_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_project_id`  (`project_id`), CONSTRAINT `fk_rails_9fcd2e236b`
+FOREIGN KEY (`tag_id`)
+  REFERENCES `tags` (`id`)
+, CONSTRAINT `fk_rails_e1d638f7e4`
+FOREIGN KEY (`project_id`)
+  REFERENCES `projects` (`id`)
+)[0m
+  ↳ db/migrate/20180421224612_create_taggings.rb:3
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421224536)
+  [1m[35m (113.8ms)[0m  [1m[35mDROP TABLE `tags`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421224536)
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE `tags`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421224536)
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE `tags`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1235.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (50.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (408.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (390.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (396.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (343.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (115.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (636.2ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (49.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (807.6ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (358.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (955.7ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (220.7ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (289.0ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (242.6ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (380.5ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (53.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (952.4ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (806.1ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421224536)
+  [1m[35m (522.0ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180421224536_create_tags.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421224536')[0m
+  ↳ bin/rails:9
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (602.7ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `project_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_project_id`  (`project_id`), CONSTRAINT `fk_rails_9fcd2e236b`
+FOREIGN KEY (`tag_id`)
+  REFERENCES `tags` (`id`)
+, CONSTRAINT `fk_rails_e1d638f7e4`
+FOREIGN KEY (`project_id`)
+  REFERENCES `projects` (`id`)
+)[0m
+  ↳ db/migrate/20180421224612_create_taggings.rb:3
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:50:45', '2018-04-21 22:50:45')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1349.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `twoisforjoy_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `twoisforjoy_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (537.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (388.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('8645638068043674390', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180416191737)
+  [1m[35m (351.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180416191737_create_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416191737')[0m
+  ↳ bin/rails:9
+  [1m[35m (42.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddIndexToUsersEmail (20180416194241)
+  [1m[35m (430.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180416194241_add_index_to_users_email.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194241')[0m
+  ↳ bin/rails:9
+  [1m[35m (92.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToUsers (20180416194832)
+  [1m[35m (812.5ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20180416194832_add_password_digest_to_users.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180416194832')[0m
+  ↳ bin/rails:9
+  [1m[35m (56.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenToUsers (20180418193329)
+  [1m[35m (846.2ms)[0m  [1m[35mALTER TABLE `users` ADD `token` varchar(255)[0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:3
+  [1m[35m (376.6ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token`  ON `users` (`token`) [0m
+  ↳ db/migrate/20180418193329_add_token_to_users.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418193329')[0m
+  ↳ bin/rails:9
+  [1m[35m (44.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTokenCreatedAtToUsers (20180418202155)
+  [1m[35m (867.0ms)[0m  [1m[35mALTER TABLE `users` ADD `token_created_at` datetime[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:3
+  [1m[35m (197.9ms)[0m  [1m[35mDROP INDEX `index_users_on_token` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:4
+  [1m[35m (221.4ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:5
+  [1m[35m (353.7ms)[0m  [1m[35mCREATE  INDEX `index_users_on_token_and_token_created_at_and_email`  ON `users` (`token`, `token_created_at`, `email`) [0m
+  ↳ db/migrate/20180418202155_add_token_created_at_to_users.rb:6
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180418202155')[0m
+  ↳ bin/rails:9
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProjects (20180419182903)
+  [1m[35m (420.8ms)[0m  [1m[35mCREATE TABLE `projects` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `teaser_text` varchar(255), `description` longblob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180419182903_create_projects.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180419182903')[0m
+  ↳ bin/rails:9
+  [1m[35m (49.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPictureToUsers (20180420132300)
+  [1m[35m (746.9ms)[0m  [1m[35mALTER TABLE `users` ADD `picture` varchar(255)[0m
+  ↳ db/migrate/20180420132300_add_picture_to_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420132300')[0m
+  ↳ bin/rails:9
+  [1m[35m (49.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDescriptionToUsers (20180421120307)
+  [1m[35m (811.1ms)[0m  [1m[35mALTER TABLE `users` ADD `description` text[0m
+  ↳ db/migrate/20180421120307_add_description_to_users.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421120307')[0m
+  ↳ bin/rails:9
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20180421224536)
+  [1m[35m (416.0ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180421224536_create_tags.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421224536')[0m
+  ↳ bin/rails:9
+  [1m[35m (48.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTaggings (20180421224612)
+  [1m[35m (504.5ms)[0m  [1m[35mCREATE TABLE `taggings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tag_id` bigint, `project_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_taggings_on_tag_id`  (`tag_id`),  INDEX `index_taggings_on_project_id`  (`project_id`), CONSTRAINT `fk_rails_9fcd2e236b`
+FOREIGN KEY (`tag_id`)
+  REFERENCES `tags` (`id`)
+, CONSTRAINT `fk_rails_e1d638f7e4`
+FOREIGN KEY (`project_id`)
+  REFERENCES `projects` (`id`)
+)[0m
+  ↳ db/migrate/20180421224612_create_taggings.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180421224612')[0m
+  ↳ bin/rails:9
+  [1m[35m (55.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-04-21 22:51:26', '2018-04-21 22:51:26')[0m
+  ↳ bin/rails:9
+  [1m[35m (58.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8645638068043674390')[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9

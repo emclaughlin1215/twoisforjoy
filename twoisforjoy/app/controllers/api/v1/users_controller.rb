@@ -12,17 +12,21 @@ class Api::V1::UsersController < Api::V1::ApiController
     if @user.update_attributes(user_params)
       render json: { user: @user }
     else
-      render json: { errors: @user.errors }
+      render json: { user: @user, errors: @user.errors }
     end
   end
 
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :picture)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :picture, :description)
     end
 
     def not_found_error
       render json: { errors: [{ details: "User not found." }] }
+    end
+
+    def get_picture_url
+      ActionController::Base.helpers.image_url(current_user.picture)
     end
 end
